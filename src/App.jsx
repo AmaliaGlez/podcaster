@@ -1,5 +1,13 @@
+import { Navbar } from './components/navbar'
+import AppRouter from './router/AppRouter'
+
 function App() {
-  return <h1>Podcaster React App</h1>
+  return (
+    <>
+      <Navbar />
+      <AppRouter />
+    </>
+  )
 }
 
 export default App
