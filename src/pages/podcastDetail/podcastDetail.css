@@ -1,3 +1,4 @@
-.example {
-  background: pink;
+.detail {
+  display: flex;
+  justify-content: space-between;
 }

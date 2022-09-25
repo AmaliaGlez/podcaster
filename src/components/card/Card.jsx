@@ -6,10 +6,12 @@ export const Card = ({ item }) => {
   const image = item['im:image'].filter((imageData) => imageData.attributes.height === '170')[0].label
 
   return (
-    <div className='card'>
-      <img src={image} alt={''} />
-      <Link to={`/podcast/${item.id.attributes['im:id']}`}>{item['im:name'].label}</Link>
-      <p>Author: {item['im:artist'].label}</p>
-    </div>
+    <Link to={`/podcast/${item.id.attributes['im:id']}`}>
+      <div className='card'>
+        <img src={image} alt={''} />
+        <p className='title'>{item['im:name'].label}</p>
+        <p className='subtitle'>Author: {item['im:artist'].label}</p>
+      </div>
+    </Link>
   )
 }
