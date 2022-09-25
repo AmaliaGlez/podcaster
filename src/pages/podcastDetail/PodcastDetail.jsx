@@ -2,6 +2,8 @@ import './podcastDetail.css'
 
 export const PodcastDetail = () => {
   return (
-    <h1>PodcastDetail page</h1>
+    <main className='container'>
+      <h1>PodcastDetail page</h1>
+    </main>
   )
 }

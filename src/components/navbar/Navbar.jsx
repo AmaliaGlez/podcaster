@@ -6,9 +6,9 @@ export const Navbar = () => {
   const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <nav>
+    <nav className='container'>
       <Link to='/'>Podcaster</Link>
-      <div className={isLoading && 'loader'} />
+      <div className={isLoading ? 'loader' : ''} />
     </nav>
   )
 }
