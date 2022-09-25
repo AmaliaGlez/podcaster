@@ -9,9 +9,12 @@
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
-.sidebar-wrapper img {
-  border-radius: 4px;
+.sidebar-wrapper > a {
   align-self: center;
+}
+
+.sidebar-wrapper > a > img {
+  border-radius: 4px;
   padding: 20px;
   height: 200px;
 }
@@ -26,7 +29,7 @@
 
 .main-info a {
   font-weight: bold;
-  color: black;
+  color: #000000;
 }
 
 .description {
@@ -39,5 +42,7 @@
 
 .description p:last-child,
 .main-info p:last-child {
+  color: #696969;
+  font-weight: normal;
   font-style: italic;
 }
