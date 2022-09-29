@@ -1,27 +1,31 @@
 import { Link } from 'react-router-dom'
-import { mockData, podcast } from '../../mockData';
+import { useGetPodcast } from '../../utils/customHooks'
 import './sidebar.css'
 
 export const Sidebar = ({ podcastId }) => {
-  const item = podcast.results[0]
+  const { isLoading, podcast } = useGetPodcast(podcastId)
 
-  const { artworkUrl600, artistName, collectionName } = item
-
-  const dataFiltered = mockData["feed"]["entry"].find(elem => elem.id.attributes['im:id'] === podcastId)
+  const { image, author, name, description } = podcast
 
   return (
     <div className='sidebar-wrapper'>
-      <Link to={`/podcast/${podcastId}`}><img src={artworkUrl600} alt={''} /></Link>
-      <div className='main-info'>
-        <Link to={`/podcast/${podcastId}`}>
-          {collectionName}
-          <p>by {artistName}</p>
-        </Link>
-      </div>
-      <div className='description'>
-        <p>Description:</p>
-        <p>{dataFiltered.summary.label}</p>
-      </div>
+      {!isLoading ? (
+        <>
+          <Link to={`/podcast/${podcastId}`}>
+            <img src={image} alt={''} />
+          </Link>
+          <div className='main-info'>
+            <Link to={`/podcast/${podcastId}`}>
+              {name}
+              <p>by {author}</p>
+            </Link>
+          </div>
+          <div className='description'>
+            <p>Description:</p>
+            <p>{description}</p>
+          </div>
+        </>
+      ) : null}
     </div>
   )
 }

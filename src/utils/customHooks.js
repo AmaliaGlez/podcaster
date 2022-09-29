@@ -1,8 +1,13 @@
 import { useQuery } from '@tanstack/react-query'
-import { getPodcasts } from '../service'
+import { getPodcast, getPodcasts } from '../service'
+import { formatPodcastDetail, formatPodcasts } from './apiFormatter'
 
-export const useGetList = () => {
+export const useGetPodcasts = () => {
   const { isLoading, error, data } = useQuery(['podcastsList'], getPodcasts)
+  return { isLoading, error, podcasts: data?.feed?.entry.map(formatPodcasts) }
+}
 
-  return { isLoading, data, error }
+export const useGetPodcast = (id) => {
+  const { isLoading, error, data } = useQuery([`podcast-${id}`], () => getPodcast(id))
+  return { isLoading, error, podcast: data && formatPodcastDetail(data) }
 }

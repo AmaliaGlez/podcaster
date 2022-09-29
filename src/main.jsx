@@ -10,10 +10,10 @@ import './index.css'
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      // staleTime: 10000, // 24 hours
-      // cacheTime: 10000, // 24 hours
-      staleTime: 1000 * 60 * 60 * 24, // 24 hours
-      cacheTime: 1000 * 60 * 60 * 24, // 24 hours
+      staleTime: 0, // 24 hours
+      cacheTime: 0, // 24 hours
+      // staleTime: 1000 * 60 * 60 * 24, // 24 hours
+      // cacheTime: 1000 * 60 * 60 * 24, // 24 hours
     },
   },
 })
@@ -24,10 +24,7 @@ const persister = createSyncStoragePersister({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <PersistQueryClientProvider
-      client={queryClient}
-      persistOptions={{ persister }}
-    >
+    <PersistQueryClientProvider client={queryClient} persistOptions={{ persister }}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
