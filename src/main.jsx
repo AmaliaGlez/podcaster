@@ -4,16 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 import { QueryClient } from '@tanstack/react-query'
 import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client'
 import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister'
+import { TTL } from './utils/constants'
 import App from './App'
 import './index.css'
 
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 0, // 24 hours
-      cacheTime: 0, // 24 hours
-      // staleTime: 1000 * 60 * 60 * 24, // 24 hours
-      // cacheTime: 1000 * 60 * 60 * 24, // 24 hours
+      staleTime: TTL,
+      cacheTime: TTL,
     },
   },
 })

@@ -1,10 +1,11 @@
-import {useState } from 'react'
+import { useState } from 'react'
 import { Card, Search } from '../../components'
 import { useGetPodcasts } from '../../utils/customHooks'
 import './home.css'
 
 export const Home = () => {
   const [filter, setFilter] = useState(null)
+
   const { isLoading, podcasts } = useGetPodcasts()
 
   const filteredPodcasts = !filter

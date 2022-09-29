@@ -12,7 +12,7 @@
 
 .detail-list > div {
   border: 1px solid #e2e1e1;
-  padding: 12px;
+  padding: 18px;
   border-radius: 4px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
 }

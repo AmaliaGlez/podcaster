@@ -12,7 +12,7 @@ export const Sidebar = ({ podcastId }) => {
       {!isLoading ? (
         <>
           <Link to={`/podcast/${podcastId}`}>
-            <img src={image} alt={''} />
+            <img src={image} alt={'podcast-cover'} />
           </Link>
           <div className='main-info'>
             <Link to={`/podcast/${podcastId}`}>

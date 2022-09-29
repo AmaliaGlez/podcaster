@@ -1,12 +1,14 @@
 import axios from 'axios'
-import { CORS_URL, PODCASTS_URL, PODCAST_URL } from '../utils/constants'
 import { XMLParser } from 'fast-xml-parser'
+import { CORS_URL, PODCASTS_URL, PODCAST_URL } from '../utils/constants'
 
 const getCorsURL = (url) => `${CORS_URL}${encodeURIComponent(url)}`
 
 const getFeed = (url) =>
   axios.get(getCorsURL(url)).then(({ data }) => {
-    const parser = new XMLParser()
+    const parser = new XMLParser({
+      ignoreAttributes: false,
+    })
     console.log('parser', parser.parse(data.contents))
     return parser.parse(data.contents).rss.channel
   })

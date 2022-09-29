@@ -1,14 +1,14 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useIsFetching } from '@tanstack/react-query'
 import './navbar.css'
 
 export const Navbar = () => {
-  const [isLoading, setIsLoading] = useState(false)
+  const isFetching = useIsFetching()
 
   return (
     <nav className='container'>
       <Link to='/'>Podcaster</Link>
-      <div className={isLoading ? 'loader' : ''} />
+      <div className={isFetching ? 'loader' : ''} />
     </nav>
   )
 }

@@ -1,6 +1,0 @@
-.podcasts-list {
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  margin: 2rem 0;
-}

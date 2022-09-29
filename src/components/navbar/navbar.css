@@ -5,7 +5,7 @@ nav {
   align-items: center;
   border-bottom: 1px solid #e2e1e19f;
 }
-  
+
 nav a {
   color: #337ab7;
   font-weight: bold;
@@ -24,10 +24,13 @@ nav a {
 }
 
 @keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes spin {
-  to { -webkit-transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
 }
-

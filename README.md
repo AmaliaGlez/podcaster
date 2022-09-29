@@ -12,6 +12,8 @@ npm install
 npm run dev
 ```
 
+Then, open [http://localhost:5174](http://localhost:5174)
+
 ## Contact
 [Amalia González Gutiérrez](https://www.linkedin.com/in/amaliagonzalezgutierrez/)
 

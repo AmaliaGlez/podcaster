@@ -23,11 +23,10 @@ export const formatPodcastDetail = (data) => {
 export const formatEpisodes = (episodes, podcastId) => {
   return episodes.map((episode, index) => ({
     id: `${index}_${podcastId}`,
-    podcastId,
     title: episode.title || 'No title provided',
     description: episode.description || 'No description provided',
     pubDate: episode.pubDate ? new Date(episode.pubDate).toLocaleDateString() : '-',
     duration: episode['itunes:duration'] ? formatTime(episode['itunes:duration'].toString()) : '-',
-    mp3: episode.enclosure || null,
+    audio: episode.enclosure?.['@_url'] || null,
   }))
 }

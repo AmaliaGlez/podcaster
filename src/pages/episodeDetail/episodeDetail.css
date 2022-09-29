@@ -1,7 +1,20 @@
 .episode-info {
   border: 1px solid #e2e1e1;
-  padding: 12px;
+  padding: 18px;
   border-radius: 4px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   width: 70%;
+  height: fit-content;
+}
+
+.episode-info > div {
+  font-style: italic;
+  margin: 1.5rem 0;
+  color: #696969;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e2e1e1;
+}
+
+.episode-info > audio {
+  width: 100%;
 }
