@@ -9,8 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/query-sync-storage-persister": "^4.7.1",
+    "@tanstack/react-query": "^4.7.1",
+    "@tanstack/react-query-persist-client": "^4.7.1",
+    "axios": "^0.27.2",
+    "fast-xml-parser": "^4.0.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",

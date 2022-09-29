@@ -9,10 +9,22 @@ Run these commands:
 git clone https://github.com/AmaliaGlez/podcaster.git
 cd podcaster
 npm install
+```
+
+## Runs the app in development mode
+
+```sh
 npm run dev
 ```
 
-## Contact
-[Amalia González Gutiérrez](https://www.linkedin.com/in/amaliagonzalezgutierrez/)
+Then, open [http://localhost:5174](http://localhost:5174)
 
-glezgutierrez95@gmail.com
+
+## Builds the app for production
+
+```sh
+npm run build
+```
+
+## Contact
+[Amalia González Gutiérrez](https://www.linkedin.com/in/amaliagonzalezgutierrez/) | glezgutierrez95@gmail.com

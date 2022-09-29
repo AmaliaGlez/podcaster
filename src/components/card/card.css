@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e1e1;
+  padding: 12px;
+  height: fit-content;
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card > img {
+  border-radius: 50%;
+}
+
+.title {
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.subtitle {
+  color: #696969;
+  margin-top: 10px;
+}
