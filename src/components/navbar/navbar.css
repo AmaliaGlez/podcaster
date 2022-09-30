@@ -4,6 +4,8 @@ nav {
   padding: 1rem 0 0.5rem;
   align-items: center;
   border-bottom: 1px solid #e2e1e19f;
+  width: 90%;
+  margin: auto;
 }
 
 nav a {

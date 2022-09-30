@@ -8,8 +8,6 @@ export const PodcastDetail = () => {
 
   const { isLoading, podcast } = useGetPodcast(podcastId)
 
-  console.log('episodes PodcastDetail', podcast)
-
   return (
     <main className='container detail'>
       {!isLoading ? (
