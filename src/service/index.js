@@ -9,7 +9,6 @@ const getFeed = (url) =>
     const parser = new XMLParser({
       ignoreAttributes: false,
     })
-    console.log('parser', parser.parse(data.contents))
     return parser.parse(data.contents).rss.channel
   })
 

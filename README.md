@@ -17,14 +17,17 @@ npm install
 npm run dev
 ```
 
-Then, open [http://localhost:5174](http://localhost:5174)
+Then, open [http://localhost:3000](http://localhost:3000)
 
 
 ## Builds the app for production
 
 ```sh
 npm run build
+npm run preview
 ```
+
+Then, open [http://localhost:3000](http://localhost:3000)
 
 ## Contact
 [Amalia González Gutiérrez](https://www.linkedin.com/in/amaliagonzalezgutierrez/) | glezgutierrez95@gmail.com
